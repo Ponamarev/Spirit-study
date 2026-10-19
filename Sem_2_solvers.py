@@ -47,7 +47,7 @@ def test_solver_performance(p_state, solver_type, E_stable, max_steps=200):
         # Проверка на расходимость по энергии
         if abs((E-E_stable)/E_stable) > 0.15:
             break
-
+        dt_crit = dt
         dt *= 1.5  # увеличиваем шаг
 
     dt_crit = dt
